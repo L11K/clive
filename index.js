@@ -130,7 +130,7 @@ function createTwitchClient() {
         // This is an action message..
         break;
       case 'chat':
-        if (message.indexOf('clips.twitch.tv/') !== -1) {
+        if (message.indexOf('https://goo.gl/forms/') !== -1) {
           logger.log('debug', `CLIP DETECTED: in message: ${message}`);
           const clipId = getUrlSlug(message);
           // check if its this clip has already been shared
@@ -202,9 +202,9 @@ function postUsingMessageInfo({ clipId, message, userstate }) {
 }
 
 function getUrlSlug(message) {
-  // split message by spaces, then filter out anything that's not a twitch clip
+  // split message by spaces, then filter out anything that's not a google forms
   const urls = _.filter(_.split(message, ' '), messagePart => {
-    return messagePart.indexOf('clips.twitch.tv/') !== -1;
+    return messagePart.indexOf('https://goo.gl/forms/') !== -1;
   });
   logger.log('debug', `URLs FOUND: ${urls.length} urls: `, urls);
   if (urls.length < 1) {

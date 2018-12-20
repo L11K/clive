@@ -44,8 +44,6 @@ Before starting, make sure [nodejs](https://nodejs.org/en/download/) v8.9.0 or l
 - **`TWITCH_CHANNELS` (required)**
   - Set the channels you want Clive to monitor for urls. These are also used for `RESTRICT_CHANNELS` If you wanted to watch for urls in `Monstercat`'s chat, you would use `"monstercat"`. If you wanted to monitor multiple channels, you would use `"monstercat mrchowderclam updownleftdie"`.
 
-- `RESTRICT_CHANNELS` (optional) \[true]
-  - **REQUIRES**: `TWITCH_CLIENT_ID` to be set. If true, only shares urls that are listed in `TWITCH_CHANNELS`.
 - `MODS_ONLY` (optional) \[false]
   - If true, only allows mods to post urls.
 - `SUBS_ONLY` (optional) \[false]
